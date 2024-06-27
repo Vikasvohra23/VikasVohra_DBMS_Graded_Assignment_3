@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Include header section -->
+    <div th:replace="admin/header :: header"></div>
+</head>
+
+<body>
+    <!-- Include navigation bar section -->
+    <div th:replace="admin/header :: navbar"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- Ticket details section -->
+                <h2 th:text="${ticket.title}"></h2>
+                <hr />
+                <h4 th:text="${ticket.shortDescription}"></h4>
+                <hr />
+                <div th:utext="${ticket.content}"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include footer section -->
+    <div th:replace="admin/footer :: footer"></div>
+</body>
+
+</html>
